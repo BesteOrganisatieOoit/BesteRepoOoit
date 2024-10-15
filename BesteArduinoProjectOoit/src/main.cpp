@@ -1,18 +1,21 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+// Define the LED pin
+const int ledPin = 13; // You can change this to the appropriate pin for your board
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  // Initialize the LED pin as an output
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Turn the LED on
+  digitalWrite(ledPin, HIGH);
+  // Wait for a second
+  delay(1000);
+  // Turn the LED off
+  digitalWrite(ledPin, LOW);
+  // Wait for a second
+  delay(1000);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
